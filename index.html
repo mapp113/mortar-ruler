@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link href="/src/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Mortar Ruler</title>
+</head>
+
+<body class="h-dvh w-dvw overflow-hidden m-0 p-0 select-none">
+  <canvas id="ruler"></canvas>
+
+  <div id="controls-container" class="flex flex-row justify-between items-center px-6 py-2 w-full">
+    
+    <div class="flex flex-row gap-2">
+      <div class="flex flex-col gap-2">
+        <button id="offset-add-10" class="bg-gray-200 p-2 text-lg active:bg-gray-400 rounded cursor-pointer touch-none">+10</button>
+        <button id="offset-sub-10" class="bg-gray-200 p-2 text-lg active:bg-gray-400 rounded cursor-pointer touch-none">-10</button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <button id="offset-add-1" class="bg-gray-200 p-2 text-lg active:bg-gray-400 rounded cursor-pointer touch-none">+1</button>
+        <button id="offset-sub-1" class="bg-gray-200 p-2 text-lg active:bg-gray-400 rounded cursor-pointer touch-none">-1</button>
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center">
+      <input class="text-3xl md:text-5xl bg-gray-100 p-2 border border-gray-300 rounded text-center w-40 md:w-56" type="text" id="result" value="0" readonly />
+    </div>
+
+    <div class="flex flex-row gap-2">
+      <div class="flex flex-col gap-2">
+        <button id="target-add-10" class="bg-gray-200 p-2 text-lg active:bg-gray-400 rounded cursor-pointer touch-none">+10</button>
+        <button id="target-sub-10" class="bg-gray-200 p-2 text-lg active:bg-gray-400 rounded cursor-pointer touch-none">-10</button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <button id="target-add-1" class="bg-gray-200 p-2 text-lg active:bg-gray-400 rounded cursor-pointer touch-none">+1</button>
+        <button id="target-sub-1" class="bg-gray-200 p-2 text-lg active:bg-gray-400 rounded cursor-pointer touch-none">-1</button>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

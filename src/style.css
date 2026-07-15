@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Thiết lập body ở chế độ Flex dọc */
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  /* Chặn kéo dãn trang trên safari/chrome mobile */
+  touch-action: none; 
+}
+
+#ruler {
+  display: block;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#controls-container {
+  flex-grow: 1;
+}
+
+/* CHẾ ĐỘ NHẮC XOAY MÀN HÌNH (PORTRAIT MODE) */
+@media (orientation: portrait) {
+  body::before {
+    content: "Rotate your screen🔄";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #1f2937;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999; /* Đè lên toàn bộ app */
+  }
+}
+
+/* Tối ưu hóa phản hồi nhấn nút trên mobile */
+button {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
