@@ -15,7 +15,7 @@ export default defineConfig({
         description: 'App calculates the distance between the offset and target lines in a mortar joint.',
         theme_color: '#ffffff',
         background_color: '#ffffff',
-        display: 'standalone',
+        display: 'fullscreen',
         orientation: 'landscape',
         icons: [
           {
