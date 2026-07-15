@@ -17,6 +17,8 @@ export default defineConfig({
         background_color: '#ffffff',
         display: 'fullscreen',
         orientation: 'landscape-primary',
+        start_url: '/mortar-ruler/',
+        scope: '/mortar-ruler/',
         icons: [
           {
             src: "/icons/icon-192x192.png",
